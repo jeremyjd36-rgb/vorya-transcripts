@@ -55,6 +55,7 @@ app.get('/transcripts/:filename', (req, res) => {
     return res.status(404).send('Introuvable');
   }
 
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.sendFile(filePath);
 });
 
